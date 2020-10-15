@@ -1,0 +1,10 @@
+load_defaults: 7.12.1
+development:
+  adapter: solr
+  url: <%= ENV['SOLR_URL'] || "http://proddla01:8082/index/pacscl" %>
+test: &test
+  adapter: solr
+  url: <%= ENV['SOLR_URL'] || "http://proddla01:8082/index/pacscl" %>
+production:
+  adapter: solr
+  url: <%= ENV['SOLR_URL'] || "http://proddla01:8082/index/pacscl" %>
